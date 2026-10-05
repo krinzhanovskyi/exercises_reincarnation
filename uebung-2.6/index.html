@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Link Exposé</title>
     <style>
       body {
@@ -19,7 +18,7 @@
       .link-expose {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: .5rem;
+        grid-gap: 0.5rem;
         margin: 2rem 0 4rem 0;
         list-style: none;
       }
@@ -32,6 +31,42 @@
         align-items: center;
       }
 
+      #link1 a:hover {
+        text-decoration: underline;
+      }
+
+      #link2 a:hover {
+        color: green;
+      }
+
+      #link3 a:hover {
+        text-decoration: line-through;
+      }
+
+      #link4 a:hover {
+        font-size: 2em;
+      }
+
+      #link5 a:hover {
+        background-color: red;
+      }
+
+      #link6 a:hover {
+        background-color: blue;
+        text-decoration: overline underline;
+      }
+
+      #link7 a:active {
+        font-size: 2em;
+      }
+
+      #link8 a:visited {
+        color: orange;
+      }
+
+      #link9 a:focus {
+        font-weight: bold;
+      }
     </style>
   </head>
 
@@ -59,7 +94,10 @@
       </article>
 
       <article id="link6" class="link-expose-item">
-        <a href="#link6">Dieser Link erhält blau als Hintergrund und wird über- und unterstrichen</a>
+        <a href="#link6"
+          >Dieser Link erhält blau als Hintergrund und wird über- und
+          unterstrichen</a
+        >
       </article>
     </section>
 
@@ -76,5 +114,4 @@
       </article>
     </section>
   </body>
-
 </html>
