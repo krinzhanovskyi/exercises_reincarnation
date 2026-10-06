@@ -1,24 +1,146 @@
-html, body {
-    margin: 0;
+html,
+body {
+  min-height: 100%;
+  margin: 0;
 }
 
-header, main, footer {
-    overflow: auto;
+body {
+  min-width: 900px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    /* source https://commons.wikimedia.org/wiki/File:D%C3%B6ner_Kebab_in_Istanbul.jpg */
-    background-image: url('abakebabra.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+  box-sizing: border-box;
+  flex: 0 0 500px;
+  padding: 10px 8%;
+  background-image: url("abakebabra.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flow-root;
 }
 
-main {
-    background-color: #EEE;
+header h1 {
+  box-sizing: border-box;
+  float: left;
+  width: 300px;
+  height: 100px;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #333;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 h1 span {
-    display: block;
-    font-size: 0.8em;
+  display: block;
+  margin-top: 4px;
+  font-size: 0.55em;
+}
+
+header nav {
+  float: right;
+  width: 432px;
+}
+
+nav ul,
+footer ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li,
+footer li {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 0;
+  border: 1px solid #333;
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+nav a,
+footer a {
+  display: block;
+  padding: 5px 4px;
+  color: #222;
+  text-decoration: none;
+}
+
+nav a:hover,
+footer a:hover {
+  background-color: #e8e8e8;
+}
+
+nav a:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: -3px;
+}
+
+main {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+main section {
+  margin-bottom: 32px;
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #999;
+  text-align: left;
+}
+
+thead,
+.subtitle {
+  font-weight: bold;
+}
+
+footer {
+  box-sizing: border-box;
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer::before {
+  content: "";
+  flex: 1 0 100px;
+  background-color: #ddd;
+}
+
+footer ul {
+  box-sizing: border-box;
+  flex: 0 0 100px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 10px;
 }
